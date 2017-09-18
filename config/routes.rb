@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'landing/index'
-  get 'landing', to: redirect('landing/index')
-  resources :articles
 
+  resources :articles
+  get '/articles/:id', to: 'articles#show'
   root controller: :landing, action: :index
 end
