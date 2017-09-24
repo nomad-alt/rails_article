@@ -12,11 +12,12 @@
   %p
     = form.label :title
     %br/
-    = form.text_field :title
+    = form.text_field :title, placeholder: "Title"
   %p
-    = form.label :content
+    = form.label :text
     %br/
-    = form.text_area :content
+    = form.text_area :content, placeholder: "Content"
   %p
-    = form.submit
-= link_to 'Back', articles_path
+    = form.submit value: "Update Article"
+
+    = link_to 'Back', root_path
